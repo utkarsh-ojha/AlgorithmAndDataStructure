@@ -20,7 +20,7 @@ def calculateFNP(knapsackCapacity, weight, value):
             if pair[0] <= remainingKnapsackCapacity:
                 maxValue += pair[1]
                 remainingKnapsackCapacity -= pair[0]
-            elif pair[0] > remainingKnapsackCapacity:
+            else:
                 maxValue += remainingKnapsackCapacity* (pair[1]/pair[0])
                 remainingKnapsackCapacity = 0
     return maxValue
